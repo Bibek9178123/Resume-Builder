@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222.2 84% 4.9%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96%;
+  --accent-foreground: 222.2 84% 4.9%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 217.2 91.2% 59.8%;
+  --primary-foreground: 222.2 84% 4.9%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 224.3 76.3% 94.1%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .resume-preview {
+    @apply bg-white shadow-lg;
+    min-height: 11in;
+    width: 8.5in;
+    padding: 0.75in;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+  
+  .resume-section {
+    @apply mb-4;
+  }
+  
+  .resume-header {
+    @apply text-center border-b-2 border-gray-800 pb-2 mb-4;
+  }
+  
+  .resume-name {
+    @apply text-2xl font-bold text-gray-800;
+  }
+  
+  .resume-contact {
+    @apply text-sm text-gray-600 mt-1;
+  }
+  
+  .resume-section-title {
+    @apply text-lg font-bold text-gray-800 border-b border-gray-400 mb-2 uppercase tracking-wide;
+  }
+  
+  .resume-item {
+    @apply mb-3;
+  }
+  
+  .resume-item-header {
+    @apply flex justify-between items-start mb-1;
+  }
+  
+  .resume-item-title {
+    @apply font-semibold text-gray-800;
+  }
+  
+  .resume-item-subtitle {
+    @apply text-gray-600;
+  }
+  
+  .resume-item-date {
+    @apply text-sm text-gray-500 font-medium;
+  }
+  
+  .resume-description {
+    @apply text-gray-700 leading-relaxed;
+  }
+  
+  .resume-skills {
+    @apply flex flex-wrap gap-2;
+  }
+  
+  .resume-skill-tag {
+    @apply bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs font-medium;
+  }
+}
